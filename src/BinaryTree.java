@@ -28,7 +28,8 @@ public class BinaryTree {
 		"this.getLeft() == null"
 	})
 	@ensures ({
-		"getLeft() != null"
+		"getLeft() != null",
+		"getLeft() == iBinTree"
 	})
 	public void setLeft(BinaryTree iBinTree) {
 		left = iBinTree;
@@ -39,7 +40,8 @@ public class BinaryTree {
 		"this.getRight() == null"		
 	})
 	@ensures ({
-		"getRight() != null"
+		"getRight() != null",
+		"getRight() == iBinTree"
 	})
 	public void setRight(BinaryTree iBinTree) {
 		right = iBinTree;
