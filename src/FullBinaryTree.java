@@ -24,4 +24,7 @@ public class FullBinaryTree extends BinaryTree{
 //	public static void main(String[] args){
 //		FullBinaryTree a = new FullBinaryTree(2);
 //	}
+	public static void main(String[] args){
+		
+	}
 }

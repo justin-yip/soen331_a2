@@ -3,18 +3,19 @@ import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
 
 @invariant ({
-	"this.height() != 0",
+	"this.height != 0",
 })
 public class BinaryTree {
 	private BinaryTree left;
 	private BinaryTree right;
+	private int height = height();
 	private long id;
 	
 	@requires({
 		"id != null"
 	})
 	@ensures ({
-		"(getLeft() == null && getRight() == null) == true"
+		"(this.left == null && this.right == null) == true"
 	})
 	public BinaryTree(long id) {
 		this.id = id;
