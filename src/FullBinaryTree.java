@@ -21,7 +21,7 @@ public class FullBinaryTree extends BinaryTree{
 	public void setLeftRight(BinaryTree a, BinaryTree b){
 		
 	}
-	public static void main(String[] args){
-		FullBinaryTree a = new FullBinaryTree(2);
-	}
+//	public static void main(String[] args){
+//		FullBinaryTree a = new FullBinaryTree(2);
+//	}
 }
