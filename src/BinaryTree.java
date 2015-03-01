@@ -18,6 +18,8 @@ public class BinaryTree {
 		"(this.left == null && this.right == null) == true"
 	})
 	public BinaryTree(long id) {
+		left = null;
+		right = null;
 		this.id = id;
 	}
 	
