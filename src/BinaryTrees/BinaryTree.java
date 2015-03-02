@@ -61,7 +61,7 @@ public class BinaryTree {
 	
 	public int sumNodes() {
 		int sum = 1;
-		if (hasLeft() && hasRight())
+		if (hasTwoChildren())
 			return sum + (getLeft().sumNodes() + getRight().sumNodes());
 		else if (hasLeft() && !hasRight())
 			return sum + getLeft().sumNodes();
@@ -76,7 +76,7 @@ public class BinaryTree {
 		int hL = 0;
 		int hR = 0;
 		
-		if (!hasLeft() && !hasRight())
+		if (hasNoChildren())
 			return height;
 		else if (!hasRight())
 			return height + getLeft().height();
@@ -91,6 +91,20 @@ public class BinaryTree {
 				return height + hL;
 		}
 	}
+	
+	protected boolean hasTwoChildren() {
+		if (hasLeft() && hasRight()) 
+			return true;
+		else 
+			return false;
+	}
+	
+	protected boolean hasNoChildren() {
+		if (!hasLeft() && !hasRight())
+			return true;
+		else
+			return false;
+	} 
 	
 	
 }

@@ -15,9 +15,9 @@ public class FullBinaryTree extends BinaryTree{
 	}
 	
 	public boolean isTwoOrNoLeaf(){
-		if (hasLeft() && hasRight()) 
+		if (hasTwoChildren()) 
 			return ((FullBinaryTree) getLeft()).isTwoOrNoLeaf() && ((FullBinaryTree) getRight()).isTwoOrNoLeaf();
-		else if (!hasLeft() && !hasRight()) 
+		else if (hasNoChildren()) 
 			return true;
 		else
 			return false;
@@ -39,4 +39,6 @@ public class FullBinaryTree extends BinaryTree{
 		this.left = a;
 		this.right = b;
 	}
+	
+	
 }
