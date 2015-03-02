@@ -1,12 +1,14 @@
+package BinaryTrees;
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
 
 @invariant({
-	"this.isBalanced() == true"
+	"this.isBalanced"
 })
 public class BalancedBinaryTree extends BinaryTree{
 
+	private boolean isBalanced = isBalanced();
 	public BalancedBinaryTree(long id) {
 		super(id);
 	}

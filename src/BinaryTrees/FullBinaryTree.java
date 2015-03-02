@@ -1,19 +1,17 @@
+package BinaryTrees;
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
 
 @invariant({
-	"this.isTwoOrNoLeaf()"
+	"this.isTwoOrNoLeaf"
 })
 public class FullBinaryTree extends BinaryTree{
 	
-	private BinaryTree left;
-	private BinaryTree right;
+	private boolean isTwoOrNoLeaf = isTwoOrNoLeaf();
 	
 	public FullBinaryTree(long id){
 		super(id);
-		this.left = getLeft();
-		this.right = getRight();
 	}
 	
 	public boolean isTwoOrNoLeaf(){
@@ -28,11 +26,5 @@ public class FullBinaryTree extends BinaryTree{
 	public void setLeftRight(BinaryTree a, BinaryTree b){
 		this.left = a;
 		this.right = b;
-//		setLeft(a);
-//		setRight(b);
-	}
-	
-	public static void main(String[] args){
-		FullBinaryTree a = new FullBinaryTree(2); 
 	}
 }

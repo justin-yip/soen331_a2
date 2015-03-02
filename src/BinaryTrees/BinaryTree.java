@@ -1,3 +1,4 @@
+package BinaryTrees;
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
@@ -6,10 +7,10 @@ import be.ac.ua.ansymo.adbc.annotations.ensures;
 	"this.height != 0",
 })
 public class BinaryTree {
-	private BinaryTree left;
-	private BinaryTree right;
-	private int height = height();
-	private long id;
+	protected BinaryTree left;		
+	protected BinaryTree right;
+	protected int height = height();
+	protected long id;
 	
 	@requires({
 		"id != null"
