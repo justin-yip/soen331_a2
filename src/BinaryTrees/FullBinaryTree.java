@@ -23,6 +23,18 @@ public class FullBinaryTree extends BinaryTree{
 			return false;
 	}
 	
+	@requires ({
+		"getLeft() == null",
+		"getRight() == null",
+		"a != null",
+		"b != null"
+	})
+	@ensures ({
+		"getLeft() != null",
+		"getRight() != null",
+		"getleft() == a",
+		"getRight() == b"
+	})
 	public void setLeftRight(BinaryTree a, BinaryTree b){
 		this.left = a;
 		this.right = b;
