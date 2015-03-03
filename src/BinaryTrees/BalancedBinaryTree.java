@@ -14,11 +14,11 @@ public class BalancedBinaryTree extends BinaryTree{
 	}
 	
 	public boolean isBalanced(){
-		if(hasLeft() && hasRight())
-			return (Math.abs(getRight().height() - getLeft().height())) <=1;
+		if(hasTwoChildren())
+			return (Math.abs(getRight().height() - getLeft().height())) <= 1;
 		else if (hasLeft())
 			return !(getLeft().hasRight() || getLeft().hasLeft());
-		else if(hasRight())
+		else if (hasRight())
 			return !(getRight().hasRight() || getRight().hasLeft());
 		else
 			return true;

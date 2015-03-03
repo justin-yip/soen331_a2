@@ -93,17 +93,11 @@ public class BinaryTree {
 	}
 	
 	protected boolean hasTwoChildren() {
-		if (hasLeft() && hasRight()) 
-			return true;
-		else 
-			return false;
+		return (hasLeft() && hasRight());
 	}
 	
 	protected boolean hasNoChildren() {
-		if (!hasLeft() && !hasRight())
-			return true;
-		else
-			return false;
+		return (!hasLeft() && !hasRight());
 	} 
 	
 	
