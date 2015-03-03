@@ -12,11 +12,16 @@ public class PerfectBinaryTree extends FullBinaryTree {
 	}
 	
 	public boolean sameHeight() {
-		int heightLeft = getLeft().height();
-		int heightRight = getRight().height();
-		if(heightLeft == heightRight){
+		if (getLeft() == null && getRight() == null)
 			return true;
+		else  {
+			int heightLeft = getLeft().height();
+			int heightRight = getRight().height();
+			if(heightLeft == heightRight) {
+				return ((PerfectBinaryTree) getLeft()).sameHeight() && ((PerfectBinaryTree) getRight()).sameHeight();
+			}
+			else
+				return false;
 		}
-		return false;
 	}
 }
