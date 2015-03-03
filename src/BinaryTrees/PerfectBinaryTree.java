@@ -12,6 +12,7 @@ public class PerfectBinaryTree extends FullBinaryTree {
 	}
 	
 	public boolean sameHeight() {
+
 		if (getLeft() == null && getRight() == null)
 			return true;
 		else  {
@@ -23,5 +24,8 @@ public class PerfectBinaryTree extends FullBinaryTree {
 			else
 				return false;
 		}
+
+		
+
 	}
 }
