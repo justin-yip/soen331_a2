@@ -15,14 +15,43 @@ public class FullBinaryTreeClient {
 		root.setLeftRight(leaf2, leaf1);
 		System.out.println("root.setLeftRight(leaf2, leaf1);");
 		
-//		Checks if Every node has either two or no children
-		System.out.println("root and its children have either two or no children: " + root.isTwoOrNoLeaf());
+//		Checks if every node has either two or no children
+		System.out.println("The root and its children have either two or no children: " + root.isTwoOrNoLeaf());
 		
 //		Fail the invariant
 //		leaf1.setRight(leaf5);
 		
 //		Fail setLeftRight()
 //		leaf1.setLeftRight(null, null);
+		
+		
+		
+		
+//		******************************************************************
+//		This section tests for the inherited invariants, and pre and post conditions.
+//		******************************************************************
+//		Fail contracts
+//		--class invariant: this.height != 0
+//		leaf4.setHeight(0);
+//		
+//		--BinaryTree requires: id != null
+//		--BinaryTree ensures: (this.left == null && this.right == null) == true
+//		
+//		--setRight() requires: iBinTree != null
+//		leaf5.setRight(null);
+//		--setRight() requires: $this.getRight() == null
+//		leaf5.setRight(root);
+//		leaf5.setRight(leaf1);
+//		--setRight() ensures: $this.getRight() != null
+//		--setRight() ensures: $this.getRight() == iBinTree
+//		
+//		--setLeft() requires: iBinTree != null
+//		leaf5.setLeft(null);
+//		--setLeft() requires: $this.getLeft() == null
+//		leaf5.setLeft(root);
+//		leaf5.setLeft(leaf1);
+//		--setLeft() ensures: $this.getLeft() != null
+//		--setLeft() ensures: $this.getLeft() == iBinTree
 	}
 
 }

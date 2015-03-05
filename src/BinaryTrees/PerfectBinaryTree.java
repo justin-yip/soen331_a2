@@ -2,10 +2,9 @@ package BinaryTrees;
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 
 @invariant ({
-	"this.isPerfect"
+	"$this.sameHeight()"
 })
 public class PerfectBinaryTree extends FullBinaryTree {
-	private boolean isPerfect = sameHeight();
 	
 	public PerfectBinaryTree(long id) {
 		super(id);
