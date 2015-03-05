@@ -5,60 +5,60 @@ public class BinaryTreeClient {
 	public static void main(String[] args) {
 		
 		//create all the separate nodes
-		BinaryTree a1 = new BinaryTree(1);
-		BinaryTree a2 = new BinaryTree(2);
-		BinaryTree a3 = new BinaryTree(3);
-		BinaryTree a4 = new BinaryTree(4);
-		BinaryTree a5 = new BinaryTree(5);
-		BinaryTree a6 = new BinaryTree(6);
+		BinaryTree root = new BinaryTree(1);
+		BinaryTree leaf1 = new BinaryTree(2);
+		BinaryTree leaf2 = new BinaryTree(3);
+		BinaryTree leaf3 = new BinaryTree(4);
+		BinaryTree leaf4 = new BinaryTree(5);
+		BinaryTree leaf5 = new BinaryTree(6);
 		//create the tree and connect the nodes to each other
-		a2.setRight(a4);
-		System.out.println("a2.setRight(a4);");
-		a3.setLeft(a5);
-		System.out.println("a3.setLeft(a5);");
-		a1.setRight(a3);
-		System.out.println("a1.setRight(a3);");
-		a1.setLeft(a2);
-		System.out.println("a1.setLeft(a2);");
+		leaf1.setRight(leaf3);
+		System.out.println("leaf1.setRight(leaf3);");
+		leaf2.setLeft(leaf4);
+		System.out.println("leaf2.setLeft(leaf4);");
+		root.setRight(leaf2);
+		System.out.println("root.setRight(leaf2);");
+		root.setLeft(leaf1);
+		System.out.println("root.setLeft(leaf1);");
 		//checks if has methods work
-		System.out.println("a2 hasLeft(): "+a2.hasLeft());
-		System.out.println("a2 hasRight(): "+a2.hasRight());
-		System.out.println("a1 hasRight(): "+a1.hasRight());
+		System.out.println("leaf1 hasLeft(): " + leaf1.hasLeft());
+		System.out.println("leaf1 hasRight(): " + leaf1.hasRight());
+		System.out.println("root hasRight(): " + root.hasRight());
 		//sum of nodes
-		System.out.println("a1 sum of nodes: "+a1.sumNodes());
-		System.out.println("a2 sum of nodes: "+a2.sumNodes());
+		System.out.println("root sum of nodes: " + root.sumNodes());
+		System.out.println("leaf1 sum of nodes: " + leaf1.sumNodes());
 		//height of nodes
-		System.out.println("a1 height of nodes: "+a1.height());
-		System.out.println("a2 height of nodes: "+a2.height());
+		System.out.println("root height of nodes: " + root.height());
+		System.out.println("leaf1 height of nodes: " + leaf1.height());
 		//has two children
-		System.out.println("a1 has two children: "+a1.hasTwoChildren());
-		System.out.println("a2 has two children: "+a2.hasTwoChildren());
-		System.out.println("a5 has two children: "+a5.hasTwoChildren());
+		System.out.println("root has two children: " + root.hasTwoChildren());
+		System.out.println("leaf1 has two children: " + leaf1.hasTwoChildren());
+		System.out.println("leaf4 has two children: " + leaf4.hasTwoChildren());
 		//has no children
-		System.out.println("a1 has no children: "+a1.hasNoChildren());
-		System.out.println("a3 has no children: "+a3.hasNoChildren());
-		System.out.println("a4 has no children: "+a4.hasNoChildren());
+		System.out.println("root has no children: " + root.hasNoChildren());
+		System.out.println("leaf2 has no children: " + leaf2.hasNoChildren());
+		System.out.println("leaf3 has no children: " + leaf3.hasNoChildren());
 		
 		//Fail contracts
 		//--class invariant: this.height != 0
-		//a5.setHeight(0);
+		//leaf4.setHeight(0);
 		
 		//--BinaryTree requires: id != null
 		//--BinaryTree ensures: (this.left == null && this.right == null) == true
 		
 		//--setRight() requires: iBinTree != null
-		//a6.setRight(null);
+		//leaf5.setRight(null);
 		//--setRight() requires: $this.getRight() == null
-		//a6.setRight(a1);
-		//a6.setRight(a2);
+		//leaf5.setRight(root);
+		//leaf5.setRight(leaf1);
 		//--setRight() ensures: $this.getRight() != null
 		//--setRight() ensures: $this.getRight() == iBinTree
 		
 		//--setLeft() requires: iBinTree != null
-		//a6.setLeft(null);
+		//leaf5.setLeft(null);
 		//--setLeft() requires: $this.getLeft() == null
-		//a6.setLeft(a1);
-		//a6.setLeft(a2);
+		//leaf5.setLeft(root);
+		//leaf5.setLeft(leaf1);
 		//--setLeft() ensures: $this.getLeft() != null
 		//--setLeft() ensures: $this.getLeft() == iBinTree
 		

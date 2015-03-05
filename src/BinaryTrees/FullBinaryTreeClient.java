@@ -23,9 +23,6 @@ public class FullBinaryTreeClient {
 		
 //		Fail setLeftRight()
 //		leaf1.setLeftRight(null, null);
-		
-		
-		
 	}
 
 }
