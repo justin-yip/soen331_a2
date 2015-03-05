@@ -4,7 +4,7 @@ import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
 
 @invariant ({
-	"this.height != 0",
+	"$this.height() != 0",
 })
 public class BinaryTree {
 	protected BinaryTree left;		
@@ -13,7 +13,7 @@ public class BinaryTree {
 	protected long id;
 	
 	@requires({
-		"id != null"
+		"this.id != null"
 	})
 	@ensures ({
 		"(this.left == null && this.right == null) == true"
@@ -29,11 +29,11 @@ public class BinaryTree {
 	
 	@requires ({
 		"iBinTree != null",
-		"this.getLeft() == null"
+		"$this.getLeft() == null"
 	})
 	@ensures ({
-		"getLeft() != null",
-		"getLeft() == iBinTree"
+		"$this.left != null",
+		"$this.left == iBinTree"
 	})
 	public void setLeft(BinaryTree iBinTree) {
 		left = iBinTree;
@@ -41,11 +41,11 @@ public class BinaryTree {
 	
 	@requires ({
 		"iBinTree != null",
-		"this.getRight() == null"		
+		"$this.getRight() == null"		
 	})
 	@ensures ({
-		"getRight() != null",
-		"getRight() == iBinTree"
+		"$this.getRight() != null",
+		"$this.getRight() == iBinTree"
 	})
 	public void setRight(BinaryTree iBinTree) {
 		right = iBinTree;
@@ -93,12 +93,23 @@ public class BinaryTree {
 	}
 	
 	protected boolean hasTwoChildren() {
-		return (hasLeft() && hasRight());
+		if (hasLeft() && hasRight()) 
+			return true;
+		else 
+			return false;
 	}
 	
 	protected boolean hasNoChildren() {
-		return (!hasLeft() && !hasRight());
+		if (!hasLeft() && !hasRight())
+			return true;
+		else
+			return false;
 	} 
-	
-	
+	//added methods to test contracts
+	public void setHeight(int height){
+		this.height = height;
+	}
+	public void setId(long id){
+		this.id = id;
+	}
 }
