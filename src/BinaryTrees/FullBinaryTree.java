@@ -4,11 +4,9 @@ import be.ac.ua.ansymo.adbc.annotations.requires;
 import be.ac.ua.ansymo.adbc.annotations.ensures;
 
 @invariant({
-	"this.isTwoOrNoLeaf"
+	"$this.isTwoOrNoLeaf()"
 })
 public class FullBinaryTree extends BinaryTree{
-	
-	private boolean isTwoOrNoLeaf = isTwoOrNoLeaf();
 	
 	public FullBinaryTree(long id){
 		super(id);
@@ -24,16 +22,16 @@ public class FullBinaryTree extends BinaryTree{
 	}
 	
 	@requires ({
-		"getLeft() == null",
-		"getRight() == null",
+		"$this.getLeft() == null",
+		"$this.getRight() == null",
 		"a != null",
 		"b != null"
 	})
 	@ensures ({
-		"getLeft() != null",
-		"getRight() != null",
-		"getleft() == a",
-		"getRight() == b"
+		"$this.getLeft() != null",
+		"$this.getRight() != null",
+		"$this.getLeft() == a",
+		"$this.getRight() == b"
 	})
 	public void setLeftRight(BinaryTree a, BinaryTree b){
 		this.left = a;
