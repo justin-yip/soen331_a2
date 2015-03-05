@@ -1,8 +1,19 @@
+/*
+ * ************************************************************************************************************************************
+ * Assignment 2 - SOEN 331 Section U-UB
+ * By Harrison Ianatchkov ID: 6607403 and Justin Yip ID: 7032870
+ * Due March 6, 2015
+ * ************************************************************************************************************************************
+ */
+
 package BinaryTrees;
 
 public class BinaryTreeClient {
 
 	public static void main(String[] args) {
+		
+		System.out.println("This class will test the PerfectBinaryTree class");
+		System.out.println("************************************************\n");
 		
 		//create all the separate nodes
 		BinaryTree root = new BinaryTree(1);
@@ -39,28 +50,28 @@ public class BinaryTreeClient {
 		System.out.println("leaf2 has no children: " + leaf2.hasNoChildren());
 		System.out.println("leaf3 has no children: " + leaf3.hasNoChildren());
 		
-		//Fail contracts
-		//--class invariant: this.height != 0
-		//leaf4.setHeight(0);
+//		Fail contracts
+//		--class invariant: this.height != 0
+//		leaf4.setHeight(0);
 		
-		//--BinaryTree requires: id != null
-		//--BinaryTree ensures: (this.left == null && this.right == null) == true
+//		--BinaryTree requires: id != null
+//		--BinaryTree ensures: (this.left == null && this.right == null) == true
 		
-		//--setRight() requires: iBinTree != null
-		//leaf5.setRight(null);
-		//--setRight() requires: $this.getRight() == null
-		//leaf5.setRight(root);
-		//leaf5.setRight(leaf1);
-		//--setRight() ensures: $this.getRight() != null
-		//--setRight() ensures: $this.getRight() == iBinTree
+//		--setRight() requires: iBinTree != null
+//		leaf5.setRight(null);
+//		--setRight() requires: $this.getRight() == null
+//		leaf5.setRight(root);
+//		leaf5.setRight(leaf1);
+//		--setRight() ensures: $this.getRight() != null
+//		--setRight() ensures: $this.getRight() == iBinTree
 		
-		//--setLeft() requires: iBinTree != null
-		//leaf5.setLeft(null);
-		//--setLeft() requires: $this.getLeft() == null
-		//leaf5.setLeft(root);
-		//leaf5.setLeft(leaf1);
-		//--setLeft() ensures: $this.getLeft() != null
-		//--setLeft() ensures: $this.getLeft() == iBinTree
+//		--setLeft() requires: iBinTree != null
+//		leaf5.setLeft(null);
+//		--setLeft() requires: $this.getLeft() == null
+//		leaf5.setLeft(root);
+//		leaf5.setLeft(leaf1);
+//		--setLeft() ensures: $this.getLeft() != null
+//		--setLeft() ensures: $this.getLeft() == iBinTree
 		
 	
 	}

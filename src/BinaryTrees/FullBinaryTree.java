@@ -1,3 +1,11 @@
+/*
+ * ************************************************************************************************************************************
+ * Assignment 2 - SOEN 331 Section U-UB
+ * By Harrison Ianatchkov ID: 6607403 and Justin Yip ID: 7032870
+ * Due March 6, 2015
+ * ************************************************************************************************************************************
+ */
+
 package BinaryTrees;
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 import be.ac.ua.ansymo.adbc.annotations.requires;

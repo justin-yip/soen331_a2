@@ -1,8 +1,21 @@
+/*
+ * ************************************************************************************************************************************
+ * Assignment 2 - SOEN 331 Section U-UB
+ * By Harrison Ianatchkov ID: 6607403 and Justin Yip ID: 7032870
+ * Due March 6, 2015
+ * ************************************************************************************************************************************
+ */
+
 package BinaryTrees;
 
 public class PerfectBinaryTreeClient {
 
 	public static void main(String[] args) {
+		
+		System.out.println("This class will test the PerfectBinaryTree class");
+		System.out.println("************************************************\n");
+		
+		//create all the separate nodes
 		PerfectBinaryTree root = new PerfectBinaryTree(0);
 		PerfectBinaryTree leaf1 = new PerfectBinaryTree(1);
 		PerfectBinaryTree leaf2 = new PerfectBinaryTree(2);
