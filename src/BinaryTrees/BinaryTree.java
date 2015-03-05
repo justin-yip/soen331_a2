@@ -109,7 +109,4 @@ public class BinaryTree {
 	public void setHeight(int height){
 		this.height = height;
 	}
-	public void setId(long id){
-		this.id = id;
-	}
 }
