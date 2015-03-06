@@ -29,7 +29,7 @@ public class BalancedBinaryTreeClient {
 		root1.setLeft(leaf12);
 		System.out.println("root1.setLeft(leaf12);");
 		//checks if isbalanced method works
-		System.out.println("root1 is balanced: "+root1.isBalanced());
+		System.out.println("root1 is balanced: " + root1.isBalanced());
 		
 		
 		

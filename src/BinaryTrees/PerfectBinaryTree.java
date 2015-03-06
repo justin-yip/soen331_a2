@@ -22,6 +22,8 @@ public class PerfectBinaryTree extends FullBinaryTree {
 
 		if (getLeft() == null && getRight() == null)
 			return true;
+		else if (getLeft() == null || getRight() == null) 
+			return false; 		
 		else  {
 			int heightLeft = getLeft().height();
 			int heightRight = getRight().height();

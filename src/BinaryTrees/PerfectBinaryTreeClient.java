@@ -84,13 +84,16 @@ public class PerfectBinaryTreeClient {
 //		--setLeft() ensures: $this.getLeft() == iBinTree
 		
 //		FullBinaryTree class
+		
 //		--class invariant: $this.isTwoOrNoleaf()
-		leaf3.setRight(leaf7);
+//		leaf3.setRight(leaf7);
 		
 //		--setLeftRight() requires: $this.getLeft() == null
-//		leaf1.setLeftRight(null, new FullBinaryTree(25));
+//		leaf1.setLeft(new PerfectBinaryTree(25));
+//		leaf1.setLeftRight(new PerfectBinaryTree(27), new PerfectBinaryTree(26));
 		
 //		--setLeftRight() requires: $this.getRight() == null
-//		leaf1.setLeftRight(new FullBinaryTree(25), null);
+//		leaf1.setRight(new PerfectBinaryTree(25));
+//		leaf1.setLeftRight(new PerfectBinaryTree(27), new PerfectBinaryTree(26));
 	}
 }
