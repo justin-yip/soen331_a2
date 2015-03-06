@@ -78,8 +78,8 @@ public class PerfectBinaryTreeClient {
 //		--setLeft() requires: iBinTree != null
 //		leaf5.setLeft(null);
 //		--setLeft() requires: $this.getLeft() == null
-//		leaf5.setLeft(root);
-//		leaf5.setLeft(leaf1);
+		leaf5.setLeft(root);
+		leaf5.setLeft(leaf1);
 //		--setLeft() ensures: $this.getLeft() != null
 //		--setLeft() ensures: $this.getLeft() == iBinTree
 		

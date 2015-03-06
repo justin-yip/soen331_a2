@@ -19,9 +19,9 @@ public class BalancedBinaryTreeClient {
 		BalancedBinaryTree root1 = new BalancedBinaryTree(1);
 		BalancedBinaryTree leaf11 = new BalancedBinaryTree(2);
 		BalancedBinaryTree leaf12 = new BalancedBinaryTree(3);
-		BalancedBinaryTree root2 = new BalancedBinaryTree(1);
-		BalancedBinaryTree leaf21 = new BalancedBinaryTree(2);
-		BalancedBinaryTree leaf22 = new BalancedBinaryTree(3);
+		BalancedBinaryTree root2 = new BalancedBinaryTree(4);
+		BalancedBinaryTree leaf21 = new BalancedBinaryTree(5);
+		BalancedBinaryTree leaf22 = new BalancedBinaryTree(6);
 
 		//create the tree and connect the nodes to each other
 		root1.setRight(leaf11);
@@ -50,14 +50,14 @@ public class BalancedBinaryTreeClient {
 //		--setRight() requires: iBinTree != null
 //		leaf12.setRight(null);
 //		--setRight() requires: $this.getRight() == null
-//		root2.setRight(root1);
-//		root2.setRight(leaf11);
+//		root2.setRight(leaf21);
+//		root2.setRight(leaf22);
 	
 //		--setLeft() requires: iBinTree != null
 //		root2.setLeft(null);
 //		--setLeft() requires: $this.getLeft() == null
-//		root2.setLeft(root1);
-//		root2.setLeft(leaf11);
+//		root2.setLeft(leaf21);
+//		root2.setLeft(leaf22);
 
 	}
 }

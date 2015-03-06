@@ -39,10 +39,15 @@ public class FullBinaryTreeClient {
 //		leaf1.setRight(leaf5);
 		
 //		--setLeftRight() requires: $this.getLeft() == null
+//		leaf1.setLeftRight(new FullBinaryTree(30), new FullBinaryTree(40));
+//		leaf1.setLeftRight(new FullBinaryTree(50), new FullBinaryTree(60));
 //		--setLeftRight() requires: a != null
 //		leaf1.setLeftRight(null, new FullBinaryTree(25));
 		
+		
 //		--setLeftRight() requires: $this.getRight() == null
+//		leaf1.setLeftRight(new FullBinaryTree(30), new FullBinaryTree(40));
+//		leaf1.setLeftRight(new FullBinaryTree(50), new FullBinaryTree(60));
 //		--setLeftRight() requires: b != null
 //		leaf1.setLeftRight(new FullBinaryTree(25), null);
 
