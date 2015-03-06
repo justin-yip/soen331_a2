@@ -14,13 +14,13 @@ import be.ac.ua.ansymo.adbc.annotations.ensures;
 @invariant({
 	"$this.isTwoOrNoLeaf()"
 })
-public class FullBinaryTree extends BinaryTree{
+public class FullBinaryTree extends BinaryTree {
 	
-	public FullBinaryTree(long id){
+	public FullBinaryTree(long id) {
 		super(id);
 	}
 	
-	public boolean isTwoOrNoLeaf(){
+	public boolean isTwoOrNoLeaf() {
 		if (hasTwoChildren()) 
 			return ((FullBinaryTree) getLeft()).isTwoOrNoLeaf() && ((FullBinaryTree) getRight()).isTwoOrNoLeaf();
 		else if (hasNoChildren()) 

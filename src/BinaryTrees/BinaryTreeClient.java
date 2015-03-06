@@ -12,7 +12,7 @@ public class BinaryTreeClient {
 
 	public static void main(String[] args) {
 		
-		System.out.println("This class will test the PerfectBinaryTree class");
+		System.out.println("This class will test the BinaryTree class");
 		System.out.println("************************************************\n");
 		
 		//create all the separate nodes
@@ -50,12 +50,15 @@ public class BinaryTreeClient {
 		System.out.println("leaf2 has no children: " + leaf2.hasNoChildren());
 		System.out.println("leaf3 has no children: " + leaf3.hasNoChildren());
 		
-//		Fail contracts
+//		Fail contracts.
+//		********************************************************************************
+//		Please test one section (sections in forms of paragraphs) at a time for proper execution.
+//		********************************************************************************
 //		--class invariant: this.height != 0
 //		leaf4.setHeight(0);
 		
 //		--BinaryTree requires: id != null
-//		--BinaryTree ensures: (this.left == null && this.right == null) == true
+//		--BinaryTree ensures: this.left == null && this.right == null
 		
 //		--setRight() requires: iBinTree != null
 //		leaf5.setRight(null);

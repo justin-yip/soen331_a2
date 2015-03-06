@@ -12,7 +12,7 @@ public class FullBinaryTreeClient {
 
 	public static void main(String[] args) {
 		
-		System.out.println("This class will test the PerfectBinaryTree class");
+		System.out.println("This class will test the FullBinaryTree class");
 		System.out.println("************************************************\n");
 		
 		//create all the separate nodes
@@ -31,25 +31,37 @@ public class FullBinaryTreeClient {
 //		Checks if every node has either two or no children
 		System.out.println("The root and its children have either two or no children: " + root.isTwoOrNoLeaf());
 		
-//		Fail the invariant
+//		Fail contracts.
+//		********************************************************************************
+//		Please test one section (sections in forms of paragraphs) at a time for proper execution.
+//		********************************************************************************
+//		--class invariant: $this.isTwoOrNoleaf()
 //		leaf1.setRight(leaf5);
 		
-//		Fail setLeftRight()
-//		leaf1.setLeftRight(null, null);
+//		--setLeftRight() requires: $this.getLeft() == null
+//		leaf1.setLeftRight(null, new FullBinaryTree(25));
 		
+//		--setLeftRight() requires: $this.getRight() == null
+//		leaf1.setLeftRight(new FullBinaryTree(25), null);
+
 		
 		
 		
 //		******************************************************************
 //		This section tests for the inherited invariants, and pre and post conditions.
 //		******************************************************************
-//		Fail contracts
+
+		
+//		Fail contracts.
+//		********************************************************************************
+//		Please test one section (sections in forms of paragraphs) at a time for proper execution.
+//		********************************************************************************
 //		--class invariant: this.height != 0
 //		leaf4.setHeight(0);
-//		
+		
 //		--BinaryTree requires: id != null
-//		--BinaryTree ensures: (this.left == null && this.right == null) == true
-//		
+//		--BinaryTree ensures: this.left == null && this.right == null
+		
 //		--setRight() requires: iBinTree != null
 //		leaf5.setRight(null);
 //		--setRight() requires: $this.getRight() == null
@@ -57,7 +69,7 @@ public class FullBinaryTreeClient {
 //		leaf5.setRight(leaf1);
 //		--setRight() ensures: $this.getRight() != null
 //		--setRight() ensures: $this.getRight() == iBinTree
-//		
+		
 //		--setLeft() requires: iBinTree != null
 //		leaf5.setLeft(null);
 //		--setLeft() requires: $this.getLeft() == null

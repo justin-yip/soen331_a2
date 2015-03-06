@@ -24,7 +24,7 @@ public class BinaryTree {
 		"this.id != null"
 	})
 	@ensures ({
-		"(this.left == null && this.right == null) == true"
+		"this.left == null && this.right == null"
 	})
 	public BinaryTree(long id) {
 		left = null;

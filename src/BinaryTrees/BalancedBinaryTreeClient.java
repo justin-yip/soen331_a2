@@ -10,9 +10,9 @@ package BinaryTrees;
 
 public class BalancedBinaryTreeClient {
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		
-		System.out.println("This class will test the PerfectBinaryTree class");
+		System.out.println("This class will test the BalancedBinaryTree class");
 		System.out.println("************************************************\n");
 		
 		//create all the separate nodes
@@ -34,7 +34,10 @@ public class BalancedBinaryTreeClient {
 		
 		
 		
-//		Fail contracts
+//		Fail contracts.
+//		********************************************************************************
+//		Please test one section (sections in forms of paragraphs) at a time for proper execution.
+//		********************************************************************************
 //		--class invariant: this.height != 0
 //		root1.setHeight(0);
 		
